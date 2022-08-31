@@ -2,7 +2,7 @@ import axios from 'axios';
 export async function allNews() {
   var url =
   `
-  http://api.mediastack.com/v1/news?access_key=b840fb58e435e544c84bef5e828fb060&countries=us,gb,de&limit=100
+  https://saurav.tech/NewsAPI/everything/cnn.json
   `;
 
   let newRes={}
@@ -10,15 +10,15 @@ export async function allNews() {
 
   function changeData(){
 
-    for(let i=0;i < res.data.length;i++){
+    for(let i=0;i < res.articles.length;i++){
       newRes = {
-        author: res.data[i].author,
-        content: res.data[i].author,
-    description: res.data[i].description,
-    source: {name:res.data[i].source},
-    title: res.data[i].title,
-    url: res.data[i].url,
-    urlToImage:res.data[i].image
+        author: res.articles[i].author,
+        content: res.articles[i].author,
+    description: res.articles[i].description,
+    source: {name:res.articles[i].source.name},
+    title: res.articles[i].title,
+    url: res.articles[i].url,
+    urlToImage:res.articles[i].urlToImage
       }
       final.push(newRes)
 
@@ -26,7 +26,7 @@ export async function allNews() {
   }
 
   const {data:res} = await axios.get(url)
-  console.log(res.data)
+  console.log(res)
   await changeData()
   return final
 
@@ -38,14 +38,14 @@ export async function allNews() {
   //   "apiKey=b5a5fc74e2864be48029772c874ce911";
 
   //   const {data:res} = await axios.get(url);
-  //   console.log(res.articles)
-  //   return(res.articles)
+  //   console.log(res.articles.articles)
+  //   return(res.articles.articles)
   }
 
 export async function trendingNews() {
   var url =
   `
-  http://api.mediastack.com/v1/news?access_key=b840fb58e435e544c84bef5e828fb060&countries=us,gb,de&limit=100
+  https://saurav.tech/NewsAPI/everything/cnn.json
   `;
 
   let newRes={}
@@ -53,15 +53,15 @@ export async function trendingNews() {
 
   function changeData(){
 
-    for(let i=0;i < res.data.length;i++){
+    for(let i=0;i < res.articles.length;i++){
       newRes = {
-        author: res.data[i].author,
-        content: res.data[i].author,
-    description: res.data[i].description,
-    source: {name:res.data[i].source},
-    title: res.data[i].title,
-    url: res.data[i].url,
-    urlToImage:res.data[i].image
+        author: res.articles[i].author,
+        content: res.articles[i].author,
+    description: res.articles[i].description,
+    source: {name:res.articles[i].source.name},
+    title: res.articles[i].title,
+    url: res.articles[i].url,
+    urlToImage:res.articles[i].urlToImage
       }
       final.push(newRes)
 
@@ -69,20 +69,20 @@ export async function trendingNews() {
   }
 
   const {data:res} = await axios.get(url)
-  console.log(res.data)
+  console.log(res)
   await changeData()
   return final
 
   // var url ="https://newsapi.org/v2/top-headlines?country=us&apiKey=b5a5fc74e2864be48029772c874ce911"
   //     const {data:res} = await axios.get(url);
-  //     console.log(res.articles)
-  //     return(res.articles)
+  //     console.log(res.articles.articles)
+  //     return(res.articles.articles)
 }
 
 export async function weekly() {
   var url =
   `
-  http://api.mediastack.com/v1/news?access_key=b840fb58e435e544c84bef5e828fb060&countries=us,gb,de&limit=100
+  https://saurav.tech/NewsAPI/everything/cnn.json
   `;
 
   let newRes={}
@@ -90,15 +90,15 @@ export async function weekly() {
 
   function changeData(){
 
-    for(let i=0;i < res.data.length;i++){
+    for(let i=0;i < res.articles.length;i++){
       newRes = {
-        author: res.data[i].author,
-        content: res.data[i].author,
-    description: res.data[i].description,
-    source: {name:res.data[i].source},
-    title: res.data[i].title,
-    url: res.data[i].url,
-    urlToImage:res.data[i].image
+        author: res.articles[i].author,
+        content: res.articles[i].author,
+    description: res.articles[i].description,
+    source: {name:res.articles[i].source.name},
+    title: res.articles[i].title,
+    url: res.articles[i].url,
+    urlToImage:res.articles[i].urlToImage
       }
       final.push(newRes)
 
@@ -106,7 +106,7 @@ export async function weekly() {
   }
 
   const {data:res} = await axios.get(url)
-  console.log(res.data)
+  console.log(res)
   await changeData()
   return final
   }
