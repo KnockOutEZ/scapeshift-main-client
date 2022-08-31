@@ -52,7 +52,7 @@ export default function AllNews(props) {
             className="col-md-4 animate-box"
             data-animate-effect="fadeInRight"
           >
-            <div className='mt-5 md-block d-none'>
+            <div className='mt-5 d-md-block d-none'>
               <h5>Sort By Popular Categories</h5>
             </div>
             <div className=" d-md-block d-none">
@@ -84,7 +84,7 @@ export default function AllNews(props) {
                 Art
               </a>
             </div>
-            <h5 className='pt-5  md-block d-none'>Sort By Date</h5>
+            <h5 className='pt-5  d-md-block d-none'>Sort By Date</h5>
             <div className=' d-md-block d-none'>
             <DateRange
   editableDateInputs={true}
