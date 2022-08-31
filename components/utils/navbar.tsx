@@ -83,8 +83,8 @@ export default function Navbar(){
                                             <li><a href="#whatsnew">Whats New?</a></li>
                                             <li><a href="#allnews">All News</a></li>
                                             <li><a href="#recent">Recent</a></li>
-                                            {/* <button
-          onClick={wallet ? handleDisconnectWallet : changeName}
+                                            <button
+          onClick={wallet ? handleDisconnectWallet : handleConnectWallet} //changeName
           className="bg-red-500 px-6 py-2 rounded-sm text-xs font-semibold text-white cursor-pointer"
         >
           💳{" "}
@@ -93,7 +93,7 @@ export default function Navbar(){
               "..." +
               wallet.slice(wallet.length - 4, wallet.length)
             : "Connect"}
-        </button> */}
+        </button>
                                             {/* <li><a href="#">Pages</a>
                                                 <ul className="submenu">
                                                     <li><a href="elements.html">Element</a></li>

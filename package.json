@@ -7,6 +7,8 @@
   },
   "dependencies": {
     "@date-io/date-fns": "1.x",
+    "@taquito/beacon-wallet": "^13.0.1",
+    "@taquito/taquito": "^13.0.1",
     "axios": "^0.27.2",
     "date-fns": "^2.29.2",
     "infinite-react-carousel": "^1.2.11",
