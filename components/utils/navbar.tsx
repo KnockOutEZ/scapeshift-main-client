@@ -1,31 +1,31 @@
-import {
-    connectWallet,
-    getActiveAccount,
-    disconnectWallet,
-    changeName,
-  } from "../Blockchain/wallet";
+// import {
+//     connectWallet,
+//     getActiveAccount,
+//     disconnectWallet,
+//     changeName,
+//   } from "../Blockchain/wallet";
   import { useEffect, useState } from "react";
 export default function Navbar(){
-    const [wallet, setWallet] = useState(null);
+    // const [wallet, setWallet] = useState(null);
 
-    const handleConnectWallet = async () => {
-      const { wallet } = await connectWallet();
-      setWallet(wallet);
-    };
-    const handleDisconnectWallet = async () => {
-      const { wallet } = await disconnectWallet();
-      setWallet(wallet);
-    };
+    // const handleConnectWallet = async () => {
+    //   const { wallet } = await connectWallet();
+    //   setWallet(wallet);
+    // };
+    // const handleDisconnectWallet = async () => {
+    //   const { wallet } = await disconnectWallet();
+    //   setWallet(wallet);
+    // };
   
-    useEffect(() => {
-      const func = async () => {
-        const account = await getActiveAccount();
-        if (account) {
-          setWallet(account.address);
-        }
-      };
-      func();
-    }, []);
+    // useEffect(() => {
+    //   const func = async () => {
+    //     const account = await getActiveAccount();
+    //     if (account) {
+    //       setWallet(account.address);
+    //     }
+    //   };
+    //   func();
+    // }, []);
     return(
         <header>
        <div className="header-area">
@@ -83,7 +83,7 @@ export default function Navbar(){
                                             <li><a href="#whatsnew">Whats New?</a></li>
                                             <li><a href="#allnews">All News</a></li>
                                             <li><a href="#recent">Recent</a></li>
-                                            <button
+                                            {/* <button
           onClick={wallet ? handleDisconnectWallet : handleConnectWallet} //changeName
           className="bg-red-500 px-6 py-2 rounded-sm text-xs font-semibold text-white cursor-pointer"
         >
@@ -93,7 +93,7 @@ export default function Navbar(){
               "..." +
               wallet.slice(wallet.length - 4, wallet.length)
             : "Connect"}
-        </button>
+        </button> */}
                                             {/* <li><a href="#">Pages</a>
                                                 <ul className="submenu">
                                                     <li><a href="elements.html">Element</a></li>
